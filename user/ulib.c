@@ -14,6 +14,18 @@ strcpy(char *s, const char *t)
   return os;
 }
 
+char* strcat(char* dst, const char* addition)
+{
+  int start_index = strlen(dst);
+  for (int i = 0; addition[i] != '\0'; i++)
+  {
+    dst[start_index++] = addition[i];
+  }
+  
+  dst[start_index] = '\0';
+  return dst;
+}
+
 int
 strcmp(const char *p, const char *q)
 {
